@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const API = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://backend-cinnamon-test.up.railway.app/'}),
     reducerPath: "main",
     tagTypes: [],
     endpoints: (build) => ({
