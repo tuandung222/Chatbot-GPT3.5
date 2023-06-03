@@ -4,14 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --host",
+    "start": "npx http-server ./dist ",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "serve": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d build"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
