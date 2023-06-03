@@ -4,10 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "npx http-server ./dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -18,7 +22,8 @@
     "react-chat-engine-advanced": "^0.1.28",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.7",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
