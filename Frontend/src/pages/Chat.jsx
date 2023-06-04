@@ -37,14 +37,10 @@ function AIBot({props, activeChat}) {
 
 export default function Chat({username = "cinnamon", password="123456"}) {
 	const chatProps = useMultiChatLogic(projectId, username, password);
-	let peopleList = chatProps.peopleToInvite;
-	let peopleArray = peopleList.filter((person) => {["aibot_1", "aibot_2", "aibot_3"].indexOf(person.username) >= 0}); 
-	console.log(peopleArray);
 	return (
 		<div style={{ fontFamily: 'Rubik'}}>
 			<MultiChatSocket {...chatProps} />
 			<MultiChatWindow  {...chatProps}
-				peopleToInvite={peopleArray} 
 				style={{ height: '100vh', fontFamily: 'Roboto' }}
 				renderMessageForm={(props) => {
 					return <AIBot 
@@ -56,4 +52,3 @@ export default function Chat({username = "cinnamon", password="123456"}) {
 		</div>
 	);
 };
-

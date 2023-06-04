@@ -25,9 +25,9 @@ export default function Login() {
     };
     useEffect(() => {
         if (resultLogin.data?.response) {
+            let data = new FormData(document.querySelector('form'));
             localStorage.setItem('username', data.get('email'));
             localStorage.setItem('password', data.get('password'));
-            <Link href="./Chat" variant="body2"></Link>
         }
     }, [resultLogin.data]); 
 
