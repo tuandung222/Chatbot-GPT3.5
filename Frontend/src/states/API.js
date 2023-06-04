@@ -1,7 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const backend_api = 'https://backend-cinnamon-test.up.railway.app/'
-// const backend_api_local = 'http://localhost:3000/'
 
 export const API = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: backend_api}),
