@@ -7,7 +7,7 @@ import { UpdateSignupDto } from './dto/update-signup.dto';
 export class SignupController {
   constructor(private readonly signupService: SignupService) {}
 
-  @Post()
+  @Post('accounts')
   create(@Body() createSignupDto: CreateSignupDto) {
     return this.signupService.create(createSignupDto);
   }

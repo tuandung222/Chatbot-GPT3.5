@@ -2,6 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { CreateLoginDto } from './dto/create-login.dto';
 import { UpdateLoginDto } from './dto/update-login.dto';
 import axios from 'axios';
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 @Injectable()
 export class LoginService {
     async create(createLoginDto: CreateLoginDto) {
