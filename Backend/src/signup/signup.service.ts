@@ -5,7 +5,7 @@ import { UpdateSignupDto } from './dto/update-signup.dto';
 @Injectable()
 export class SignupService {
   create(createSignupDto: CreateSignupDto) {
-    return 'This action adds a new signup';
+    
   }
 
   findAll() {
