@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// const backend_url = 'https://backend-cinnamon-test.up.railway.app/'
 const backend_url = 'https://backend-cinnamon-test.up.railway.app/'
 
 export const API1 = createApi({
@@ -12,7 +11,7 @@ export const API1 = createApi({
             query: (payload) => ({
                 url: "gpt",
                 method: "POST",
-                body: payload,\
+                body: payload,
                 mode: 'no-cors'
             }),
         }),
