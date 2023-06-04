@@ -4,7 +4,7 @@ const backend_api = 'https://backend-cinnamon-test.up.railway.app/'
 // const backend_api_local = 'http://localhost:3000/'
 
 export const API = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: backend_api_local}),
+    baseQuery: fetchBaseQuery({ baseUrl: backend_api}),
     reducerPath: "main",
     tagTypes: [],
     endpoints: (build) => ({
