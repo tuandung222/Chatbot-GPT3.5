@@ -3,6 +3,11 @@ import Chat from './pages/Chat'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 localStorage.setItem('successLogin', false)
+
+
+
+
+
 function App() {
     let successLogin = localStorage.getItem('successLogin')
     let mainRoute;
