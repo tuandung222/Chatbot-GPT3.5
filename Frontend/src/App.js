@@ -5,6 +5,13 @@ import Signup from './pages/Signup'
 localStorage.setItem('successLogin', false)
 
 
+// set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+// const requestOptions = {
+//     method: 'GET',
+//     mode: 'no-cors',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({ title: 'React POST Request Example' })
+// };
 
 
 

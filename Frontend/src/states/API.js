@@ -1,56 +1,39 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const backend_url = 'https://backend-cinnamon-test.up.railway.app/'
+const backend_api = 'https://backend-cinnamon-test.up.railway.app/'
+// const backend_api_local = 'http://localhost:3000/'
 
-export const API1 = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: backend_url + 'message'}),
-    reducerPath: "message",
+export const API = createApi({
+    baseQuery: fetchBaseQuery({ baseUrl: backend_api}),
+    reducerPath: "main",
     tagTypes: [],
     endpoints: (build) => ({
         postMessage: build.mutation({
             query: (payload) => ({
-                url: "gpt",
+                url: "message/gpt",
                 method: "POST",
                 body: payload,
-                mode: 'no-cors'
             }),
         }),
-    }),
-});
-
-const API2 = createApi({    
-    baseQuery: fetchBaseQuery({ baseUrl: backend_url + 'login'}),
-    reducerPath: "login",
-    tagTypes: [],
-    endpoints: (build) => ({
         postLogin: build.mutation({
             query: (payload) => ({
-                url: "accounts",
+                url: "login/accounts",
                 method: "POST",
                 body: payload,
-                mode: 'no-cors'
             }),
         }),
-    }),
-});
-const API3 = createApi({    
-    baseQuery: fetchBaseQuery({ baseUrl: backend_url + 'signup'}),
-    reducerPath: "signup",
-    tagTypes: [],
-    endpoints: (build) => ({
-        postLogin: build.mutation({
+        postSignUp: build.mutation({
             query: (payload) => ({
-                url: "accounts",
+                url: "signup/accounts",
                 method: "POST",
                 body: payload,
-                mode: 'no-cors'
             }),
         }),
     }),
 });
 
-export const usePostMessageMutation = API1.endpoints.postMessage.useMutation;
-export const usePostLoginMutation = API2.endpoints.postLogin.useMutation;
-export const usePostSignUpMutation = API3.endpoints.postLogin.useMutation;
-
-
+export const {
+    usePostMessageMutation,
+    usePostLoginMutation,
+    usePostSignUpMutation,
+} = API;
