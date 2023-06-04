@@ -20,14 +20,13 @@ export default function Login() {
         const username = data.get('username');
         const password = data.get('password');
         triggerLogin({ username, password })
-        
-        
     };
     useEffect(() => {
         if (resultLogin.data?.response) {
             let data = new FormData(document.querySelector('form'));
-            localStorage.setItem('username', data.get('email'));
+            localStorage.setItem('username', data.get('username'));
             localStorage.setItem('password', data.get('password'));
+            localStorage.setItem('successLogin', true);
         }
     }, [resultLogin.data]); 
 
