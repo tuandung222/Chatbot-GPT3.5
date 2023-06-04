@@ -7,8 +7,9 @@ import { UpdateLoginDto } from './dto/update-login.dto';
 export class LoginController {
   constructor(private readonly loginService: LoginService) {}
 
-  @Post()
+  @Post('accounts')
   create(@Body() createLoginDto: CreateLoginDto) {
+    console.log("createLoginDto", createLoginDto)
     return this.loginService.create(createLoginDto);
   }
 
